@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import localRecipes from './localRecipes.json';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -33,25 +34,8 @@ function App() {
     <>  
     <Navbar />
     <div className="min-h-screen bg-gray-50 pt-16 p-6">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-brand-green mb-4">NaijaBites 🥘</h1>
-          <div className="flex gap-2">
-            <input 
-              type="text" 
-              className="flex-1 p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-green outline-none"
-              placeholder="Search Jollof, Chicken, etc..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button 
-              onClick={() => fetchRecipes(search)}
-              className="bg-brand-green text-white px-6 py-2 rounded-lg font-bold hover:bg-opacity-90"
-            >
-              Search
-            </button>
-          </div>
-        </header>
+      <div className=" mx-auto">
+       <Hero search={search} setSearch={setSearch} onSearch={fetchRecipes} />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {recipes.map((recipe) => (
