@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import RecipeCard from './components/RecipeCard';
 import Footer from './components/Footer';
+import RecipeDetail from './components/RecipeDetail';
+
 
 function Home({ recipes, search, setSearch, fetchRecipes }) {
   return (
@@ -67,19 +69,10 @@ function App() {
             fetchRecipes={fetchRecipes}
           />
         } />
-        <Route path="/recipe/:id" element={<RecipeDetailPage allRecipes={recipes} />} />
+       <Route path="/recipe/:id" element={<RecipeDetail />} />
       </Routes>
       <Footer />
     </>
-  );
-}
-
-//placeholder to be replaced
-function RecipeDetailPage({ allRecipes }) {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <p className="text-gray-500 text-lg">Loading recipe...</p>
-    </div>
   );
 }
 

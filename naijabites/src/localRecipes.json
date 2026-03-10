@@ -5,7 +5,9 @@
     "strMealThumb": "https://images.unsplash.com/photo-1674486274060-f47a9a3c4ed5?w=400",
     "strArea": "Nigerian",
     "strCategory": "Rice",
-    "cookTime": "45 mins"
+    "cookTime": "45 mins",
+    "ingredients": ["Long grain parboiled rice", "Tomato paste", "Scotch bonnet peppers", "Onion", "Thyme", "Bay leaves", "Chicken stock", "Vegetable oil"],
+    "instructions": "Blend tomatoes, scotch bonnet and onion into a smooth paste. Heat oil in a pot and fry the tomato paste for 15 minutes until the raw smell is gone. Add chicken stock and bring to a boil. Wash and add the parboiled rice. Season with thyme and bay leaves. Cover and cook on low heat until rice absorbs all the liquid. Fluff with a fork and serve"
   },
   {
     "idMeal": "102",
@@ -13,7 +15,9 @@
     "strMealThumb": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400",
     "strArea": "Nigerian",
     "strCategory": "Soup",
-    "cookTime": "60 mins"
+    "cookTime": "60 mins",
+    "ingredients": ["Egusi seeds (ground)", "Spinach or bitter leaf", "Assorted meat", "Palm oil", "Crayfish", "Stockfish", "Onion", "Seasoning cubes"],
+    "instructions": "Cook assorted meat with onion and seasoning until tender. Heat palm oil and fry ground egusi until it clumps together. Add meat stock and stir well. Add cooked meat, crayfish and stockfish. Simmer for 20 minutes. Add washed spinach or bitter leaf and cook for 5 more minutes. Serve hot with pounded yam"
   },
   {
     "idMeal": "103",
@@ -21,7 +25,9 @@
     "strMealThumb": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400",
     "strArea": "Nigerian",
     "strCategory": "Soup",
-    "cookTime": "60 mins"
+    "cookTime": "60 mins",
+    "ingredients": ["Ground egusi", "Palm oil", "Assorted meat", "Dry fish", "Crayfish", "Ugu leaves", "Onion", "Pepper"],
+    "instructions": "Boil assorted meat until tender and set aside. Heat palm oil and add blended onion and pepper. Fry for 10 minutes. Mix ground egusi with water to form a paste and add to the pot. Stir and cook for 15 minutes. Add meat, dry fish and crayfish. Cook for another 10 minutes. Add chopped ugu leaves and simmer for 5 minutes"
   },
   {
     "idMeal": "104",
@@ -29,7 +35,9 @@
     "strMealThumb": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400",
     "strArea": "Nigerian",
     "strCategory": "BBQ",
-    "cookTime": "30 mins"
+    "cookTime": "30 mins",
+    "ingredients": ["Beef sirloin", "Yaji spice mix", "Groundnut powder", "Ginger powder", "Garlic powder", "Vegetable oil", "Salt"],
+    "instructions": "Slice beef into thin flat pieces. Mix yaji spice, groundnut powder, ginger, garlic and salt together. Coat beef slices thoroughly in the spice mix. Thread onto skewers and brush with oil. Grill on high heat for 5-7 minutes each side until charred at the edges. Serve with sliced onions and tomatoes"
   },
   {
     "idMeal": "105",
@@ -37,7 +45,9 @@
     "strMealThumb": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400",
     "strArea": "Nigerian",
     "strCategory": "Beans",
-    "cookTime": "50 mins"
+    "cookTime": "50 mins",
+    "ingredients": ["Black eyed beans", "Red bell pepper", "Scotch bonnet", "Onion", "Vegetable oil", "Crayfish", "Eggs", "Seasoning"],
+    "instructions": "Soak beans and peel off the skin by rubbing between your palms. Blend beans with pepper, onion and scotch bonnet until smooth. Add crayfish, oil and seasoning to the mixture. Pour into greased moulds or banana leaves. Place a boiled egg in the centre of each mould. Steam for 45 minutes until firm and cooked through"
   },
   {
     "idMeal": "106",
@@ -45,6 +55,8 @@
     "strMealThumb": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400",
     "strArea": "Nigerian",
     "strCategory": "Soup",
-    "cookTime": "40 mins"
+    "cookTime": "40 mins",
+    "ingredients": ["Goat meat or catfish", "Pepper soup spice", "Scotch bonnet", "Uziza leaves", "Crayfish", "Onion", "Salt", "Seasoning cubes"],
+    "instructions": "Wash and season meat or fish with onion, salt and seasoning. Cook in a pot with just enough water to cover. Add pepper soup spice and scotch bonnet. Simmer on medium heat for 25 minutes. Add crayfish and taste for seasoning. Add uziza leaves and cook for a final 5 minutes. Serve hot as a starter or main"
   }
 ]
