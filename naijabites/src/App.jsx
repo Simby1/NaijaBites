@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import localRecipes from './localRecipes.json';
+import Navbar from './components/Navbar';
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -29,7 +30,9 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <>  
+    <Navbar />
+    <div className="min-h-screen bg-gray-50 pt-16 p-6">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-10">
           <h1 className="text-4xl font-bold text-brand-green mb-4">NaijaBites 🥘</h1>
@@ -63,6 +66,7 @@ function App() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
