@@ -3,6 +3,8 @@ import localRecipes from './localRecipes.json';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import RecipeCard from './components/RecipeCard';
+import Footer from './components/Footer';
+
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -50,6 +52,8 @@ function App() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }
