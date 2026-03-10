@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import localRecipes from './localRecipes.json';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import RecipeCard from './components/RecipeCard';
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -9,20 +10,22 @@ function App() {
 
   const fetchRecipes = async (query = '') => {
     try {
-      // fetch from TheMealDB
       const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
       const data = await response.json();
-      
-      //filter local recipes based on search
-      const filteredLocal = localRecipes.filter(r => 
-        r.strMeal.toLowerCase().includes(query.toLowerCase())
+
+      const filteredLocal = localRecipes.filter(r =>
+        r.strMeal?.toLowerCase().includes(query.toLowerCase())
       );
 
-      //merge them Local DB then AP)
-      const combined = [...filteredLocal, ...(data.meals || [])];
-      setRecipes(combined);
+      const nigerianMeals = (data.meals || []).filter(r =>
+        r.strArea === 'Nigerian' || r.strArea === 'Ghanaian' || r.strArea === 'Kenyan'
+      );
+
+      const combined = [...filteredLocal, ...nigerianMeals];
+      setRecipes(combined.length > 0 ? combined : localRecipes);
     } catch (error) {
       console.error("Error fetching recipes:", error);
+      setRecipes(localRecipes);
     }
   };
 
@@ -31,25 +34,22 @@ function App() {
   }, []);
 
   return (
-    <>  
-    <Navbar />
-    <div className="min-h-screen bg-gray-50 pt-16 p-6">
-      <div className=" mx-auto">
-       <Hero search={search} setSearch={setSearch} onSearch={fetchRecipes} />
+    <>
+      <Navbar />
+      <Hero search={search} setSearch={setSearch} onSearch={fetchRecipes} />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {recipes.map((recipe) => (
-            <div key={recipe.idMeal} className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
-              <img src={recipe.strMealThumb} alt={recipe.strMeal} className="w-full h-48 object-cover" />
-              <div className="p-4">
-                <h3 className="font-bold text-lg text-gray-800">{recipe.strMeal}</h3>
-                <p className="text-sm text-brand-orange font-medium">{recipe.strArea} • {recipe.strCategory}</p>
-              </div>
-            </div>
-          ))}
+      <main className="bg-gray-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            {search ? `Results for "${search}"` : 'All Recipes'}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {recipes.map((recipe) => (
+              <RecipeCard key={recipe.idMeal} recipe={recipe} />
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </main>
     </>
   );
 }

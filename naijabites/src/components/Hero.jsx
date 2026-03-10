@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 import { Search } from 'lucide-react';
 
 export default function Hero({ search, setSearch, onSearch }) {
@@ -71,8 +70,7 @@ export default function Hero({ search, setSearch, onSearch }) {
         </div>
       </div>
 
-      {/* Bottom fade into page */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-50 to-transparent z-10" />
+      
     </section>
   );
 }
