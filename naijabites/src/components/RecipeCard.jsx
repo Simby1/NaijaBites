@@ -1,4 +1,6 @@
 import { Clock, ChefHat } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 export default function RecipeCard({ recipe }) {
   return (
@@ -46,9 +48,12 @@ export default function RecipeCard({ recipe }) {
 
         {/* CTA - pushed to bottom */}
         <div className="mt-auto">
-          <button className="w-full h-10 sm:h-11 bg-brand-green text-white font-semibold rounded-xl hover:bg-brand-green/90 active:scale-95 transition-all text-sm">
+          <Link
+            to={`/recipe/${recipe.idMeal}`}
+            className="block w-full h-10 sm:h-11 bg-brand-green text-white font-semibold rounded-xl hover:bg-brand-green/90 active:scale-95 transition-all text-sm text-center leading-10 sm:leading-11"
+          >
             View Recipe
-          </button>
+          </Link>
         </div>
       </div>
 
